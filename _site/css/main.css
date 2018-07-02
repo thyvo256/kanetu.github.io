@@ -1,0 +1,179 @@
+/*Navbar*/
+nav.navbar.navbar-expand-lg.navbar-light.bg-dark-custom{
+	border-top: 1px solid black;
+	margin-top: 5px;
+}
+.navbar-dark .navbar-nav .nav-link-custom{
+	color: black;
+}
+.bg-dark{
+	background: #fff;
+}
+ul.nav.navbar-nav.navbar-logo.mx-auto.navbar-custom{
+	top: 0px;
+    position: absolute;
+    left: 45%;
+}
+#logo{
+	position: relative;
+	cursor: pointer;
+}
+#logo a{
+	font-family: 'Great Vibes', cursive !important;
+	font-size: 40px;
+	font-weight: bold;
+}
+#brand-logo{
+	position: absolute;
+	z-index: 1;
+	top: -20px;
+}
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 65px solid black;
+    position:relative;
+}
+.triangle:after{
+    content:'';
+    position:absolute;
+    top:-100px;
+    left:-95px;
+    width: 0;
+    height: 0;
+    border-left: 95px solid transparent;
+    border-right: 95px solid transparent;
+    border-top: 95px solid white;
+}
+
+.nav-item.active{
+	border-bottom: 1px solid black;
+}
+/*Navbar->end*/
+
+#maint{
+  font-family: 'Roboto', sans-serif;
+}
+.content {
+  position: relative;
+  max-width: 48rem;
+  margin-left: 22rem;
+  margin-right: 2rem;
+  padding: 4rem 1rem;
+}
+.footer{
+  margin-top: 2rem;
+}
+.main-article, 
+.page-article, 
+.post {
+  margin-bottom: 1rem;
+  box-shadow: 0px 50px 110px -40px rgba(86, 119, 119, 0.68), 0px 5px 20px rgba(0, 0, 0, 0.1);
+}
+.main-article .header-article, 
+.main-article .page-header,
+.page-article .header-article,
+.page-article .page-header,
+.post .header-article,
+.post .page-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.main-article .wrap-content,
+.page-article .wrap-content, 
+.post .wrap-content {
+  background-color: #fff;
+  padding: 1rem;
+}
+.main-article .title-article,
+.main-article .page-title, 
+.main-article .post-title, 
+.page-article .title-article, 
+.page-article .page-title, 
+.page-article .post-title, 
+.post .title-article, 
+.post .page-title, 
+.post .post-title {
+  margin-bottom: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: grey;
+  font-size: 1.5rem;
+  margin-top: 0.67rem;
+}
+.main-article .title-article a, 
+.main-article .page-title a, 
+.main-article .post-title a, 
+.page-article .title-article a, 
+.page-article .page-title a, 
+.page-article .post-title a, 
+.post .title-article a, 
+.post .page-title a, 
+.post .post-title a {
+  color: grey;
+  text-decoration: none;
+}
+.main-article .post-date span, 
+.main-article .page-date span, 
+.page-article .post-date span, 
+.page-article .page-date span, 
+.post .post-date span, 
+.post .page-date span {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: darkgrey;
+}
+.main-article .more, 
+.page-article .more, 
+.post .more {
+  text-decoration: none;
+  color: lightgreen;
+}
+
+img.post-image, img.page-img {
+  width: 100%;
+}
+
+.page-content {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+.pagination {
+  text-align: center;
+}
+.pagination a.next, .pagination a.previous {
+  padding: 1rem 2.5rem;
+  color: white;
+  text-transform: uppercase;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  background: #15F3A8;
+  -webkit-transition: all .35s;
+  transition: all .35s;
+}
+.pagination a.next:hover, .pagination a.previous:hover {
+  box-shadow: none;
+}
+.pagination span.next, .pagination span.previous {
+  text-transform: uppercase;
+  color: white;
+  padding: 1rem 2.5rem;
+  background: #ccc;
+}
+
+.btn-custom{
+  width: 100%;
+  background: darkgrey;
+  color: black;
+  border: none;
+}
+.btn-custom:hover{
+  background: black;
+  transition: all 0.5s ease;
+}
+.form-div{
+  margin-top: 40px;
+}
