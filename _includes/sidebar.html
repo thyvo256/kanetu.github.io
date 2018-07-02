@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark-custom">
+    <div class="collapse navbar-collapse w-100 order-1 order-lg-0" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+          
+        {% for category in site.categories %}
+        <li class="nav-item">
+                <a class="nav-link" href="/{{ category | first }}">{{ category | first }}</a>
+            </li>
+        {% endfor %}
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/about">About</a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="d-flex w-100 order-0">
+        <div class="w-100">
+            
+        </div>
+        <div id="logo">
+        	<a class="nav-link nav-link-custom" id="brand-logo" href="#" data-toggle="collapse" data-target="#navbarNav">Kane</a>
+	      	<div class="triangle"></div>
+        </div>
+        
+        <span class="w-100"></span>
+    </div>
+    <span class="w-100"></span>
+</nav>

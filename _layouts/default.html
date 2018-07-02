@@ -1,0 +1,30 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+  <div class="container">
+    {% include sidebar.html %}
+
+    <main id="main" >
+
+      {{ content }}
+
+      
+
+    </main>
+    <div class="row">
+      <div class="footer">
+        <div class="container">
+          {% include social.html %}
+        </div>
+    </div>
+    </div>
+    
+  </div>
+  </body>
+  {% include scripts.html %}
+  {% include analytics.html %}
+</html>
