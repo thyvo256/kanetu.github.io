@@ -1,3 +1,6 @@
+#main{
+  margin-top: 60px;
+}
 /*Navbar*/
 nav.navbar.navbar-expand-lg.navbar-light.bg-dark-custom{
 	border-top: 1px solid black;
@@ -5,6 +8,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-dark-custom{
 }
 .navbar-dark .navbar-nav .nav-link-custom{
 	color: black;
+  text-align: center;
 }
 .bg-dark{
 	background: #fff;
