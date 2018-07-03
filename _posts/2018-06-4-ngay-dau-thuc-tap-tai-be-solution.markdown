@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Thực tập tại {Be} Solution"
+title:  "Ngày đầu thực tập tại {Be} Solution"
 date:   2018-06-4 12:32:40 +0200
 img: be-office.jpg
 description: Xin chào, tôi là Hiếu nickname là Kane hiện đang là sinh viên năm 3 trường đại học Trà Vinh, năm 3 này tôi được đi thực tập tại một cty outsource ở TP HCM.
