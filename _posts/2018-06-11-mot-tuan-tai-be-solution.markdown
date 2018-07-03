@@ -3,7 +3,7 @@ layout: post
 title:  "Một tuần tại {Be} Solution"
 date:   2018-06-11 14:00:40 +0200
 img: a-week-on-be-solutions.jpg
-description: Xin chào, tôi là Hiếu nickname là Kane hiện đang là sinh viên năm 3 trường đại học Trà Vinh, năm 3 này tôi được đi thực tập tại một cty outsource ở TP HCM.
+description: Hello !!! Sau một tuần chúng tôi đã hoàn thành giao diện được giao, phải nói là gặp rất nhiều khó khăn trong phần javascript, tôi cảm thấy nghi ngơ về câu "Javascript is easy to learn"
 category: Coding
 ---
 
@@ -26,11 +26,13 @@ Sau này nếu học nâng cao hơn thì các bạn sẽ có phần xử lý b�
 Đây là một ví dụ nhỏ
 
 {% highlight javascript %}
-	jQuery("body").on("click",".file-drop-zone-title", function(){ $("#project-attachments").trigger('click'); });
+	jQuery("body").on("click",".file-drop-zone-title", function(){
+	     $("#project-attachments").trigger('click'); 
+	});
 	
-	//javascript sẽ đợi đến khi body load xong phần tử được chọn .file-drop-zone-title và lúc đó
+	/*javascript sẽ đợi đến khi body load xong phần tử được chọn .file-drop-zone-title và lúc đó
 	 bạn có thể áp dụng đúng javascript đúng như mong muốn 
-	 như ở trường hợp này class .file-drop-zone-title chứa id #project-attachments và tôi muốn chờ body load xong class .file-drop-zone-title lúc này tôi áp dụng phần script trong function(){...} cho phần tử có id là #project-attachments.
+	 như ở trường hợp này class .file-drop-zone-title chứa id #project-attachments và tôi muốn chờ body load xong class .file-drop-zone-title lúc này tôi áp dụng phần script trong function(){...} cho phần tử có id là #project-attachments.*/
 {% endhighlight %}
 
 Tôi mong là những người đọc blog này ít nhất có thể hiểu tôi đang viết về cài gì, đối với tôi việc viết blog này không chỉ là viết cho vui, tại đây tôi có thể cũng cố kiến thức của mình cũng như phát triển bản thân từng ngày. 
