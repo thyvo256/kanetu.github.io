@@ -13,7 +13,9 @@ Sau một tuần chúng tôi đã hoàn thành giao diện được giao, phải
 Tôi gặp một trở ngại khi phải làm việc với Javascript như là làm sao áp dụng `script` cho một phần tử html chưa được render ra, và thật may là đàn anh của tôi hướng dẫn một tips này: 
 
 {% highlight javascript %}
-	jQuery("body").on("click",".file-drop-zone-title", function(){ $("#project-attachments").trigger('click'); });
+	jQuery("body").on("click",".file-drop-zone-title", function(){
+	     $("#project-attachments").trigger('click'); 
+	});
 {% endhighlight %}
 
 Nó có nghĩa là sẽ chờ toàn bộ `body` load xong và áp dụng `function()...` vào một hoặc nhiều phần tử element đã chọn.
@@ -30,10 +32,9 @@ Sau này nếu học nâng cao hơn thì các bạn sẽ có phần xử lý b�
 	     $("#project-attachments").trigger('click'); 
 	});
 	
-	/*javascript sẽ đợi đến khi body load xong phần tử được chọn .file-drop-zone-title và lúc đó
-	 bạn có thể áp dụng đúng javascript đúng như mong muốn 
-	 như ở trường hợp này class .file-drop-zone-title chứa id #project-attachments và tôi muốn chờ body load xong class .file-drop-zone-title lúc này tôi áp dụng phần script trong function(){...} cho phần tử có id là #project-attachments.*/
 {% endhighlight %}
+
+Javascript sẽ đợi đến khi body load xong phần tử được chọn `.file-drop-zone-title` và lúc đó bạn có thể áp dụng đúng javascript đúng như mong muốn, như ở trường hợp này class `.file-drop-zone-title` chứa id `#project-attachments` và tôi muốn chờ body load xong class `.file-drop-zone-title` lúc này tôi áp dụng phần script trong `function(){...}` cho phần tử có id là `#project-attachments`.
 
 Tôi mong là những người đọc blog này ít nhất có thể hiểu tôi đang viết về cài gì, đối với tôi việc viết blog này không chỉ là viết cho vui, tại đây tôi có thể cũng cố kiến thức của mình cũng như phát triển bản thân từng ngày. 
 
