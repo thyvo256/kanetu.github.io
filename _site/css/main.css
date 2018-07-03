@@ -1,3 +1,4 @@
+@import url(syntax.css);
 #main{
   margin-top: 60px;
 }
@@ -6,7 +7,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-dark-custom{
 	border-top: 1px solid black;
 	margin-top: 5px;
 }
-.navbar-dark .navbar-nav .nav-link-custom{
+.nav-link.nav-link-custom{
 	color: black;
   text-align: center;
 }
