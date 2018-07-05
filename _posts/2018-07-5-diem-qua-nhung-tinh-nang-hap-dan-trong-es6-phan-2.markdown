@@ -185,7 +185,7 @@ Như ta đã biết thì có 2 cách để chỉ định một khóa khi xử l�
 Xem ví dụ này:
 
 {% highlight javascript %}
-	var name = "make";
+var name = "make";
     const laptop = {
         [name]: "Apple"
     }
@@ -198,7 +198,7 @@ Chúng ta thấy rằng nó cho phép ta truyền biến `name` vào dấu `[]` 
 Bonus:
 
 {% highlight javascript %}
-	var name = "make";
+var name = "make";
     var i = 0;
     const laptop = {
         [name + ++i]: "Apple",
