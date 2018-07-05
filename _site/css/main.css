@@ -106,7 +106,7 @@ ul.nav.navbar-nav.navbar-logo.mx-auto.navbar-custom{
   -webkit-transition: all .3s;
   transition: all .3s;
   color: grey;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-top: 0.67rem;
 }
 .main-article .title-article a, 
@@ -185,4 +185,35 @@ img.post-image, img.page-img {
 }
 .form-div{
   margin-top: 40px;
+}
+
+/*Footer*/
+footer{
+  display: flex;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: rgba(0,0,0,.5);
+  font-style: italic;
+  font-size: 0.8rem;
+}
+.links a{
+  text-decoration: none !important;
+}
+.copy-right{
+  order: 0;
+  flex-grow: 1;
+}
+
+h1{
+  font-size: 1.3rem;
+}
+h2{
+  font-size: 1.2rem;
+}
+h3{
+  font-size: 1.1rem;
+}
+h4{
+  font-size: 1.0rem;
 }

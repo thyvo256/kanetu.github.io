@@ -7,7 +7,7 @@ description: Trước tiên để hiểu gõ về tính năng tiếp theo ta c�
 category: Coding
 ---
 
-## Research lại Object trong Javacript
+## `#`Research lại Object trong Javacript
 
 Trước tiên để hiểu gõ về tính năng tiếp theo ta cần hiểu gõ Object trong Javacript là gì, nếu ai đã hiểu rồi thì có thể scoll xuống mục 5.
 
@@ -31,7 +31,7 @@ Có 2 cách để tạo ra Object là
 	2. Dùng Object constructor.
 
 Mình sẽ nói ngắn gọn và cho ví dụ về 2 cách này để đi thẳng vào vấn đề.
-### Dùng Object literals
+### `#`Dùng Object literals
 
 Đại khái là sẽ dùng cặp ngoặc nhọn `{ }` để tạo một object. `Literal` có thể hiểu theo ngữ cảnh nào đó là việc “sử dụng chuỗi thuần tuý”.
 
@@ -49,7 +49,7 @@ var myCar = {
 };
 {% endhighlight %}
 
-### Dùng Object constructor
+### `#`Dùng Object constructor
 
 Cách này sẽ sử dụng phương thức khởi tạo (constructor) của kiểu dữ liệu Object để tạo ra các object. Phương thức khởi tạo này là một hàm để tạo ra các object mới, ta dùng kèm từ khoá `new`:
 
@@ -65,11 +65,11 @@ myApple.howSweet = function(){
 };
 {% endhighlight %}
 
-### Tạo nhiều object cùng loại.
+### `#`Tạo nhiều object cùng loại.
 
 Ở mục 5.1 và 5.2 tôi đã giới thiệu cách tạo một `object` trong javascript nhưng đó chỉ là tạo một object thôi vậy để làm tao ta tạo một loạt những object cùng loại. 
 
-#### Sử dụng mẫu khởi tạo
+#### `##`Sử dụng mẫu khởi tạo
 
 Cách này giống như ta tạo một class trong các ngôn ngữ lập trình khác, nhưng khác là Javascript sử dụng từ khoá `function` để tạo ra một hàm khởi tạo đối tượng, dùng từ khoá `this` để gán các thuộc tính cho đối tượng:
 
@@ -90,7 +90,7 @@ var mangoFruit = new Fruit('yellow', 'Mango');
 var appleFruit = new Fruit('red', 'Apple');
 {% endhighlight %}
 
-#### Sử dụng prototype
+#### `##`Sử dụng prototype
 
 Ex:
 
