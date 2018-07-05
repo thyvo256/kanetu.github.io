@@ -11,7 +11,7 @@ Sư phụ tôi từng nói là một dev thì đụng cái gì cũng code đư�
 
 Trang blog này được lập ra nhằm tích lũy kinh nghiệm của tôi, có thể còn nhiều thiếu sót hoặc hiểu sai vấn đề, nếu bạn đọc có thắc mắc hay nhận thấy tôi sai thì cứ gửi mail tại đây <a href="https://kanetu.github.io/contact">tại đây</a>, tôi đây rất sẵn lòng tiếp thu. 
 
-Cảm ơn những ai đã theo dõi, xin chào và quyết thắng!
+Cảm ơn những ai đã theo dõi, chào thân ái và quyết thắng!
 
 facebook: <a href="https://www.facebook.com/sufuijk">/sufuijk</a>
 
