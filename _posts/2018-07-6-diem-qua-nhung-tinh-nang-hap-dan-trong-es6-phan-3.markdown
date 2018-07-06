@@ -41,7 +41,7 @@ echoName("kane"); // nó sẽ alert ra kane
 
 {% endhighlight %}
 
-1. Khi `funciton` chỉ có `một dòng lệnh`, ta có thể viết như thế này cho gọn hơn.
+- Khi `funciton` chỉ có `một dòng lệnh`, ta có thể viết như thế này cho gọn hơn.
 
 {% highlight javascript %}
 
@@ -53,7 +53,7 @@ echoName("kane") // alert ra kane
 
 Nghĩa là bạn có thể bỏ đi cặp dấu {}, điều này tuân thủ theo nguyên tắc "nếu bên thân cặp {} chỉ là một câu lệnh thì bạn có thể bỏ cặp {}".
 
-2. Khi `function` chỉ có `một tham tham số`, ta có thể viết ngắn gọn lại là:
+- Khi `function` chỉ có `một tham tham số`, ta có thể viết ngắn gọn lại là:
 
 {% highlight javascript %}
 
@@ -69,7 +69,7 @@ var echoName1 = name => alert(name);
 
 {% endhighlight %}
 
-3. Khi `function` không có tham số:
+- Khi `function` không có tham số:
 
 {% highlight javascript %}
 
@@ -79,7 +79,7 @@ sayHello(); // alert ra câu Hello....!
 
 {% endhighlight %}
 
-4. Ta Phải chú ý đến ràng buộc mũi tên `=>` nữa nhá:
+- Ta Phải chú ý đến ràng buộc mũi tên `=>` nữa nhá:
 
 {% highlight javascript %}
 
@@ -109,7 +109,7 @@ y
 ## 7. Destructuring Assignment in ES6
 
 ```
-Cú pháp <b>Destructuring Assignment</b> là một biểu thức Javascript mà nó có thể giải nén các giá trị từ `array` hoặc thuộc tính từ một `object` vào những biến riêng biệt.
+Cú pháp Destructuring Assignment là một biểu thức Javascript mà nó có thể giải nén các giá trị từ `array` hoặc thuộc tính từ một `object` vào những biến riêng biệt.
 ```
 
 {% highlight javascript %}
