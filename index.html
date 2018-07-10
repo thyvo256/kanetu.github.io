@@ -1,14 +1,9 @@
 ---
 layout: default
 ---
-<div class="row">
-
-  
-
-  
+<div class="row row-custom" id="masonry">
 
   {% for post in paginator.posts %}
-  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 
     <article class="main-article">
       <div class="wrap-content">
@@ -19,10 +14,9 @@ layout: default
         {% if post.img %}
         <img class="post-image" src={{ "/img/" | prepend: site.baseurl | append: post.img }} alt="{{post.title}}">
         {% endif %}
-        <p>{{post.description}} <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
+        <p class="post-description">{{post.description}} <a class="more" href="{{post.url | prepend: site.baseurl}}">(Read more...)</a></p>
       </div>
     </article>
-  </div>
 
   {% endfor %}
 </div>
@@ -41,6 +35,15 @@ layout: default
 </div>
 
 <footer>
+  <div class="ad-sense"> 
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-1946298918364804",
+              enable_page_level_ads: true
+         });
+    </script>
+  </div>  
   <div class="copy-right">
     Copyright &copy; 2018 by Kane Tu 
   </div>
