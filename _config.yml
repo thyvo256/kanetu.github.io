@@ -55,7 +55,7 @@ avatar: http://graph.facebook.com/100004792424249/picture?width=100&height=100
 filter: 'category'
 recent_num: 20
 # Paginate
-paginate: 5
+paginate: 6
 paginate_path: /page:num/
 
 # Build settings

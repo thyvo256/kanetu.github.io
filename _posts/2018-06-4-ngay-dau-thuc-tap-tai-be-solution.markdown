@@ -4,7 +4,7 @@ title:  "Ngày đầu thực tập tại {Be} Solution"
 date:   2018-06-4 12:32:40 +0200
 img: be-office.jpg
 description: Xin chào, tôi là Hiếu nickname là Kane hiện đang là sinh viên năm 3 trường đại học Trà Vinh, năm 3 này tôi được đi thực tập tại một cty outsource ở TP HCM.
-category: Coding
+category: Intern-trip
 ---
 
 Xin chào, tôi là Hiếu nickname là Kane hiện đang là sinh viên năm 3 trường đại học Trà Vinh, năm 3 này tôi được đi thực tập tại một cty outsource ở TP HCM là Be Solutions, ở đây tôi được rất nhiều người hướng dẫn tùy vào từng giai đoạn thực tập, người hướng dẫn tôi anh Yang Nguyễn đặt ra 3 yêu cầu phải làm trong khóa thực tập này bao gồm: 

@@ -4,7 +4,7 @@ title:  "Một tuần tại {Be} Solution"
 date:   2018-06-11 14:00:40 +0200
 img: a-week-on-be-solutions.jpg
 description: Hello !!! Sau một tuần chúng tôi đã hoàn thành giao diện được giao, phải nói là gặp rất nhiều khó khăn trong phần javascript, tôi cảm thấy nghi ngơ về câu "Javascript is easy to learn"
-category: Coding
+category: Intern-trip
 ---
 
 Hello !!!
