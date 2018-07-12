@@ -13,6 +13,9 @@
 .wrap-content{
   background: #F9F9F9 !important;;
 }
+#view__wrap-content{
+  margin: 0;
+}
 /*Navbar*/
 nav.navbar.navbar-expand-lg.navbar-light.bg-dark-custom{
 	border-top: 1px solid black;
