@@ -3,7 +3,8 @@ layout: default
 ---
 <div class="row row-custom" id="masonry">
 
-  {% for post in paginator.posts %}
+
+  {% for post in site.posts offset: 0%}
 
     <article class="main-article">
       <div class="wrap-content">
