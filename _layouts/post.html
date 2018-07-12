@@ -13,10 +13,7 @@ layout: default
       {% endif %}
       {{page.content | markdownify}}
     </div>
-    {% include disqus.html %}
+    {% include comment.html %}
   </div>
 </article>
 
-<div class="row">
-{% include comment.html %}
-</div>
