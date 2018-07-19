@@ -175,7 +175,9 @@ img.post-image, img.page-img {
   object-fit: cover;
   margin-bottom: 15px;
 }
-
+img{
+  width: 100%;
+}
 .page-content {
   padding-bottom: 1rem;
   margin-bottom: 1rem;

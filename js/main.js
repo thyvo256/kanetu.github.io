@@ -6,4 +6,5 @@ $(document).ready(function(){
 	    }
 	);
 	$("p").has("img").css({"textAlign":"center"});
+	//$(".page-content p").find("img").map(function(){ $(this).addClass('img-responsive');});
 });
