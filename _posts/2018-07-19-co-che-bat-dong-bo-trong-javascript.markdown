@@ -2,7 +2,7 @@
 layout: post
 title:  "Cơ chế bất đồng bộ trong Javascript"
 date:   2018-07-19 9:38:40 +0200
-img: suy-nghi-cua-mot-thang-intern.jpg
+img: co-che-bat-dong-bo-trong-javascript.png
 category: Coding
 description: Như bao ngày giờ là lúc rãnh nên tôi quyết định tìm hiểu xem cơ chế bất đồng bộ trong javascript nó hoạt động như thế nào
 ---
@@ -61,7 +61,7 @@ Trước khi bước vào tìm hiểu cách hoạt động của các thành ph�
 
 ![Ảnh 3]({{ "img//2018-07-19/anh3.png" | absolute_url }})
 
-Lệnh này lập tức trả về dòng chữ This is the first line đồng nghĩa với việc nó đã chạy xong và được đẩy ra khỏi CALL STACK.
+Lệnh này lập tức trả về dòng chữ `Dong 1` đồng nghĩa với việc nó đã chạy xong và được đẩy ra khỏi CALL STACK.
 
 ![Ảnh 4]({{ "img//2018-07-19/anh4.png" | absolute_url }})
 
@@ -88,7 +88,7 @@ Sau khi bộ giờ trong WEB APIs chạy xong thì kết quả trả về lúc n
 
 ![Ảnh 9]({{ "img//2018-07-19/anh9.png" | absolute_url }})
 
-EVENT LOOP với chức năng liên tục giám sát xem CALL STACK đã trống chưa và CALLBACK QUEUE có gì không. Lúc này CALLBACK QUEUE đang chư kết quả mà WEB APIs trả về nên và CALL STACK lúc này cũng đã trống do toàn bộ code trong chương trình đã được thực hiện nên nó sẽ đẩy kết quả trong CALLBACK QUEUE vào lại CALL STACK và đoạn code `console.log('Dong 2')` được thực hiện và trả kết quả ra màn hình.
+EVENT LOOP với chức năng liên tục giám sát xem CALL STACK đã trống chưa và CALLBACK QUEUE có gì không. Lúc này CALLBACK QUEUE đang chờ kết quả mà WEB APIs trả về nên và CALL STACK lúc này cũng đã trống do toàn bộ code trong chương trình đã được thực hiện nên nó sẽ đẩy kết quả trong CALLBACK QUEUE vào lại CALL STACK và đoạn code `console.log('Dong 2')` được thực hiện và trả kết quả ra màn hình.
 
 ![Ảnh 10]({{ "img/2018-07-19/anh10.png" | absolute_url }})
 
