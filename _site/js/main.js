@@ -5,4 +5,5 @@ $(document).ready(function(){
 	      $(this).addClass('active');
 	    }
 	);
+	$("p").has("img").css('textAlign':'center');
 });

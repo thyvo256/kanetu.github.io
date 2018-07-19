@@ -181,6 +181,9 @@ img.post-image, img.page-img {
   margin-bottom: 1rem;
   border-bottom: 1px solid #ccc;
 }
+.page-content p{
+  text-align: justify;
+}
 .pagination {
   text-align: center;
 }
