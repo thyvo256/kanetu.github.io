@@ -175,9 +175,7 @@ img.post-image, img.page-img {
   object-fit: cover;
   margin-bottom: 15px;
 }
-img{
-  width: 100%;
-}
+
 .page-content {
   padding-bottom: 1rem;
   margin-bottom: 1rem;
@@ -261,5 +259,9 @@ h4{
   }
   .wrap-content{
     margin: 0 1rem 0 1rem;
+  }
+
+  img{
+    width: 100%;
   }
 }
