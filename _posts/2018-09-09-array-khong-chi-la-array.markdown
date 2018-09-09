@@ -10,21 +10,23 @@ category: Coding
 Hầu hết các ngôn ngữ đều trang bị kiểu aray để xử lý, lưu trữ nhiều phần tử cùng lúc, JS cũng không ngoại lệ NHƯNG array trong JS không chỉ đơn giản là array.
 Chúng ta có thể dùng array làm:
 
-1️⃣️ Array, cái này đương nhiên :D
-2️⃣️ Stack
-3️⃣️ Queue
-4️⃣️ Dictionary
-5️⃣️ Sortable List
-6️⃣️ String Builder
-7️⃣️ Combo
+1. Array, cái này đương nhiên.
+2️. Stack.
+3. Queue.
+4️. Dictionary.
+5️. Sortable List.
+6. String Builder.
+7️. Combo.
 
-2️⃣️ Bỏ qua cái thứ 1, chúng ta có thể dùng array như 1 stack, đặc tính của stack là LIFO (đi trễ về sớm). Có 2 method để là chuyện này là push và pop
+###1️. Stack
+Bỏ qua cái thứ 1, chúng ta có thể dùng array như 1 stack, đặc tính của stack là LIFO (đi trễ về sớm). Có 2 method để là chuyện này là push và pop
 
 const array = [1, 2, 3];
 array.push(4); // => [1, 2, 3, 4]
 array.pop() // => [1, 2, 3]
 
-3️⃣️ Sử dụng array như 1 queue cũng có 2 method là unshift (enqueue), shift (dequeue) để đảm bảo đặc tính FIFO (đi sớm về sớm)
+###2. Queue 
+Sử dụng array như 1 queue cũng có 2 method là unshift (enqueue), shift (dequeue) để đảm bảo đặc tính FIFO (đi sớm về sớm)
 
 {% highlight javascript %}
 const array = [1, 2, 3];
@@ -32,7 +34,8 @@ array.shift(); // => [2, 3
 array.unshift(1) // => [1, 2, 3]
 {% endhighlight %}
 
-4️⃣️ Dùng array như môt Dictionary có hơi miễn cưỡng nhưng ok, fine, nó vẫn hoạt động bình thường
+###3. Dictionary
+Dùng array như môt Dictionary có hơi miễn cưỡng nhưng ok, fine, nó vẫn hoạt động bình thường
 
 {% highlight javascript %}
 const array = [1, 2, 3];
@@ -47,7 +50,8 @@ Như các bạn đã thấy, việc thao tác trên key có 2 điểm cần lưu
 for(let key in array) // => 1, 2, 3, $key1 (không có $key2 vì đã bị delete)
 {% endhighlight %}
 
-5️⃣️ Dùng array như sortable list khá đơn giản, bản thân method sort của array là mutable nên mỗi lần thêm item mới vào thì chúng ta sort lại
+###4. Sortable List
+Dùng array như sortable list khá đơn giản, bản thân method sort của array là mutable nên mỗi lần thêm item mới vào thì chúng ta sort lại
 
 {% highlight javascript %}
 const array = [5, 6, 7];
@@ -55,7 +59,8 @@ array.push(1); // => [5, 6, 7, 1]
 array.sort(); // => [1, 5, 6, 7]
 {% endhighlight %}
 
-6️⃣️ Array còn được sử dụng như String Builder, đa số ngôn ngữ lập trình, việc nối chuỗi mất khá nhiều bộ nhớ và chậm, vi mỗi lần nối chuỗi thì hệ thống phải cấp phát vùng nhớ mới rộng hơn, ứng với độ dài chuỗi củ và mới cộng lại, sau đó sao chép cả 2 vào đó. Nên xử lý chuỗi nhiều có thể làm chậm he thống, vì vậy String Builder ra đời, giúp tối ưu việc chỉnh sửa chuỗi.
+###5. String Builder
+Array còn được sử dụng như String Builder, đa số ngôn ngữ lập trình, việc nối chuỗi mất khá nhiều bộ nhớ và chậm, vi mỗi lần nối chuỗi thì hệ thống phải cấp phát vùng nhớ mới rộng hơn, ứng với độ dài chuỗi củ và mới cộng lại, sau đó sao chép cả 2 vào đó. Nên xử lý chuỗi nhiều có thể làm chậm he thống, vì vậy String Builder ra đời, giúp tối ưu việc chỉnh sửa chuỗi.
 
 {% highlight javascript %}
 const stringBuilder = [];
@@ -65,7 +70,8 @@ for(let i [0; i < 10000; i++) {
 const result = stringBuilder.join('');
 {% endhighlight %}
 
-7️⃣️ Cách này là một cách tà đạo của array, dùng kết hợp array + dictionary. Ví dụ bạn có một hàm tìm kiếm theo điều kiện sau đó trả về danh sách kết quả tìm được và thứ tự của các phần tử đó trong danh sách ban đầu
+###6. Combo
+Cách này là một cách tà đạo của array, dùng kết hợp array + dictionary. Ví dụ bạn có một hàm tìm kiếm theo điều kiện sau đó trả về danh sách kết quả tìm được và thứ tự của các phần tử đó trong danh sách ban đầu
 
 {% highlight javascript %}
 const userTable = [ { name: 'A' }, { name: 'B' }, { name: 'C' } ];
