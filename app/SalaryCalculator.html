@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Salary-Calculator</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		#revenues-other input,
+		#expense input{
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 offset-md-3">
+				<form action="#" method="POST" role="form">
+					<div class="form-group">
+						<label for="">Salary</label>
+						<input type="text" class="form-control" id="salary" required>
+					</div>
+
+					<label for="">Expense <i class="fas fa-plus-circle" onclick="addExpense()"></i></label>
+					<div class="form-group" id="expense">
+					</div>
+				
+					<label for="">Revenues Other <i class="fas fa-plus-circle" onclick="addRevenues()"></i></label>
+					<div class="form-group" id="revenues-other">
+					</div>
+				
+					<div class="form-group">
+						<label for="">The Rest</label>
+						<input type="text" class="form-control" id="the-rest" required>
+					</div>
+				<button type="submit" onclick="calculator()" class="btn btn-primary" id="btn-submit">Calculation!!</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+	<script type="text/javascript">
+
+			var new_expense = document.createElement('input');
+			new_expense.className = 'form-control expense-id';
+
+			function addExpense(){
+				$("#expense").append('<input type="text" class="form-control expense-id">');
+			}
+
+			function addRevenues(){
+				$("#revenues-other").append('<input type="text" class="form-control revenues-other-id">');
+			}
+
+			$("#btn-submit").click(function( event ) {
+			  event.preventDefault();
+			});
+
+			function calculator(){
+				let revenues = 0;
+				let expense = 0;
+				let salary = parseFloat(document.getElementById('salary').value);
+
+				$(".revenues-other-id").toArray().forEach(function(item){ 
+					console.log(item.value);
+					if (isNaN(item.value)){
+						alert("Must input numbers");
+						return false;
+					}else{
+						revenues += parseFloat(item.value);
+					}
+				});
+
+				$(".expense-id").toArray().forEach(function(item){ 
+					console.log(item.value);
+					if (isNaN(item.value)){
+						alert("Must input numbers");
+						return false;
+					}else{
+						expense += parseFloat(item.value);
+					}
+				});
+
+
+				console.log(`Res: ${revenues} Exp: ${expense} salary ${salary}`);
+				let rest = salary +  revenues - expense;
+				document.getElementById('the-rest').value = rest;
+			}
+			
+	</script>
+</body>
+</html>
