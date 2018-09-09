@@ -1,21 +1,22 @@
 ---
 layout: post
 title:  "Array Không Chỉ Là Array "
-date:   2018-07-6 9:18:40 +0200
+date:   2018-09-09 7:45:40 +0200
 img: array-javascript.png
 description: Hầu hết các ngôn ngữ đều trang bị kiểu aray để xử lý, lưu trữ nhiều phần tử cùng lúc, JS cũng không ngoại lệ NHƯNG array trong JS không chỉ đơn giản là array.
 category: Coding
 ---
 
-Hầu hết các ngôn ngữ đều trang bị kiểu aray để xử lý, lưu trữ nhiều phần tử cùng lúc, JS cũng không ngoại lệ NHƯNG array trong JS không chỉ đơn giản là array
+Hầu hết các ngôn ngữ đều trang bị kiểu aray để xử lý, lưu trữ nhiều phần tử cùng lúc, JS cũng không ngoại lệ NHƯNG array trong JS không chỉ đơn giản là array.
 Chúng ta có thể dùng array làm:
-· · ·1️⃣️ Array, cái này đương nhiên :D
-· · ·2️⃣️ Stack
-· · ·3️⃣️ Queue
-· · ·4️⃣️ Dictionary
-· · ·5️⃣️ Sortable List
-· · ·6️⃣️ String Builder
-· · ·7️⃣️ Combo
+
+1️⃣️ Array, cái này đương nhiên :D
+2️⃣️ Stack
+3️⃣️ Queue
+4️⃣️ Dictionary
+5️⃣️ Sortable List
+6️⃣️ String Builder
+7️⃣️ Combo
 
 2️⃣️ Bỏ qua cái thứ 1, chúng ta có thể dùng array như 1 stack, đặc tính của stack là LIFO (đi trễ về sớm). Có 2 method để là chuyện này là push và pop
 
