@@ -11,21 +11,21 @@ Hầu hết các ngôn ngữ đều trang bị kiểu aray để xử lý, lưu 
 Chúng ta có thể dùng array làm:
 
 1. Array, cái này đương nhiên.
-2️. Stack.
+2. Stack.
 3. Queue.
-4️. Dictionary.
-5️. Sortable List.
+4. Dictionary.
+5. Sortable List.
 6. String Builder.
-7️. Combo.
+7. Combo.
 
-###1️. Stack
+### 1️. Stack
 Bỏ qua cái thứ 1, chúng ta có thể dùng array như 1 stack, đặc tính của stack là LIFO (đi trễ về sớm). Có 2 method để là chuyện này là push và pop
 
 const array = [1, 2, 3];
 array.push(4); // => [1, 2, 3, 4]
 array.pop() // => [1, 2, 3]
 
-###2. Queue 
+### 2. Queue 
 Sử dụng array như 1 queue cũng có 2 method là unshift (enqueue), shift (dequeue) để đảm bảo đặc tính FIFO (đi sớm về sớm)
 
 {% highlight javascript %}
@@ -34,7 +34,7 @@ array.shift(); // => [2, 3
 array.unshift(1) // => [1, 2, 3]
 {% endhighlight %}
 
-###3. Dictionary
+### 3. Dictionary
 Dùng array như môt Dictionary có hơi miễn cưỡng nhưng ok, fine, nó vẫn hoạt động bình thường
 
 {% highlight javascript %}
@@ -50,7 +50,7 @@ Như các bạn đã thấy, việc thao tác trên key có 2 điểm cần lưu
 for(let key in array) // => 1, 2, 3, $key1 (không có $key2 vì đã bị delete)
 {% endhighlight %}
 
-###4. Sortable List
+### 4. Sortable List
 Dùng array như sortable list khá đơn giản, bản thân method sort của array là mutable nên mỗi lần thêm item mới vào thì chúng ta sort lại
 
 {% highlight javascript %}
@@ -59,7 +59,7 @@ array.push(1); // => [5, 6, 7, 1]
 array.sort(); // => [1, 5, 6, 7]
 {% endhighlight %}
 
-###5. String Builder
+### 5. String Builder
 Array còn được sử dụng như String Builder, đa số ngôn ngữ lập trình, việc nối chuỗi mất khá nhiều bộ nhớ và chậm, vi mỗi lần nối chuỗi thì hệ thống phải cấp phát vùng nhớ mới rộng hơn, ứng với độ dài chuỗi củ và mới cộng lại, sau đó sao chép cả 2 vào đó. Nên xử lý chuỗi nhiều có thể làm chậm he thống, vì vậy String Builder ra đời, giúp tối ưu việc chỉnh sửa chuỗi.
 
 {% highlight javascript %}
@@ -70,7 +70,7 @@ for(let i [0; i < 10000; i++) {
 const result = stringBuilder.join('');
 {% endhighlight %}
 
-###6. Combo
+### 6. Combo
 Cách này là một cách tà đạo của array, dùng kết hợp array + dictionary. Ví dụ bạn có một hàm tìm kiếm theo điều kiện sau đó trả về danh sách kết quả tìm được và thứ tự của các phần tử đó trong danh sách ban đầu
 
 {% highlight javascript %}
