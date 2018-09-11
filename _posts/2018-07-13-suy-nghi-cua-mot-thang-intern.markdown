@@ -3,7 +3,7 @@ layout: post
 title:  "Suy nghĩa của một thằng Intern"
 date:   2018-07-13 14:32:40 +0200
 img: suy-nghi-cua-mot-thang-intern.jpg
-category: Intern-trip
+category: Intern
 description: Hôm này là một ngày buồn chán, tôi đã hoàn thành xong khóa trainning của mình và giờ khá là rãnh để ngồi viết những dòng này. Người ta nói "Ngựa non háu đá" và đó chính là tôi bây giờ. 
 ---
 
