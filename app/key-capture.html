@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Key capture</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+
+	<style>
+		#keyShow{
+			font-size: 5rem;
+			text-align: center;
+			margin-bottom: 45px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<h1 id="keyShow">KeyCap</h1>
+			</div>
+
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<table class="table table-bordered">
+	  
+	  <tbody>
+	    <tr>
+	      <th scope="row">code</th>
+	      <td id="code"></td>
+	      <th scope="row">isTrusted</th>
+	      <td id="isTrusted"></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">key</th>
+	      <td id="key"></td>
+	      <th scope="row">altKey</th>
+	      <td id="altKey"></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">keyCode</th>
+	      <td id="keyCode"></td>
+	      <th scope="row">ctrlKey</th>
+	      <td id="ctrlKey"></td>
+	    </tr>
+	    <tr>
+	      <th scope="row">which</th>
+	      <td id="which"></td>
+	      <th scope="row">shiftKey</th>
+	      <td id="shiftKey"></td>
+	    </tr>
+
+	    
+	    
+	  </tbody>
+	</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+	<script>
+
+		//window.onkeypress = keyCapture;
+		window.addEventListener ('keydown',keyCapture);
+
+		function keyCapture(event){
+			var evtobj = window.event? event : e;
+
+
+			var charCode = document.getElementById('code').innerHTML = event.code;
+			var key = document.getElementById('key').innerHTML = event.key;
+			var keyCode = document.getElementById('keyCode').innerHTML = event.keyCode;
+			var which = document.getElementById('which').innerHTML = event.which;
+
+			var isTrusted = document.getElementById('isTrusted').innerHTML = event.isTrusted;
+			var altKey = document.getElementById('altKey').innerHTML = event.altKey;
+			var ctrlKey = document.getElementById('ctrlKey').innerHTML = event.ctrlKey;
+			var shiftKey = document.getElementById('shiftKey').innerHTML = event.shiftKey;
+
+			var keyShow = document.getElementById('keyShow').innerHTML = event.code;
+
+
+			console.log(evtobj);
+		}
+		
+	</script>
+</body>
+</html>
