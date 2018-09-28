@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Salary-Calculator</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" >
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<style>
+		.title-app{
+			text-align: center;
+			margin: 20px 0px;
+		}
+		#revenues-other input,
+		#expense input{
+			margin-bottom: 30px;
+		}
+		.revenuse-cl,
+		.expense-cl{
+			position: relative;
+		}
+		i.fas.fa-minus-circle{
+			position: absolute;
+			right: 5px;
+			top: 10px;
+		}
+		input.note{
+			border: none;
+			border-bottom: 1px solid grey;
+			position: absolute;
+			top: -22px;
+			right: 0;
+			width: auto;
+			padding: 0px 5px;
+			outline: none;
+			font-size: 12px;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-lg-6 offset-lg-3">
+				<h2 class="title-app">Ứng dụng quản lý tài chính</h2>
+				<form action="#" method="POST" role="form">
+					<div class="form-group">
+						<label for="">Lương </label>
+						<input type="text" class="form-control" onkeyup="splitInDots(this)" id="salary" required>
+					</div>
+
+					<label for="">Chi tiêu <i class="fas fa-plus-circle" onclick="addExpense()"></i></label>
+					<div class="form-group" id="expense">
+					</div>
+				
+					<label for="">Nguồn thu phụ <i class="fas fa-plus-circle" onclick="addRevenues()"></i></label>
+					<div class="form-group" id="revenues-other">
+					</div>
+				
+					<div class="form-group">
+						<label for="">Tiền còn lại </label>
+						<input type="text" class="form-control" onkeyup="splitInDots(this)" id="the-rest" required>
+					</div>
+				<button type="submit" onclick="calculator()" class="btn btn-primary" id="btn-submit">Calculation!!</button>
+			</form>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+	<script type="text/javascript">
+
+			var new_expense = document.createElement('input');
+			new_expense.className = 'form-control expense-id';
+
+			function addExpense(){
+				$("#expense").append('<div class="expense-cl"><i class="fas fa-minus-circle" onclick="removeItem(this)"></i><input type="text" class="note" placeholder="Note (Ghi chú)"><input type="text" class="form-control expense-id" onkeyup="splitInDots(this)"></div>');
+			}
+
+			function removeItem(ele){
+				console.log($(ele).parent().remove());
+			}
+
+			function addRevenues(){
+				$("#revenues-other").append('<div class="revenuse-cl"><i class="fas fa-minus-circle" onclick="removeItem(this)"></i><input type="text" class="note" placeholder="Note (Ghi chú)"><input  type="text" class="form-control revenues-other-id" onkeyup="splitInDots(this)"></div>');
+			}
+
+			$("#btn-submit").click(function( event ) {
+			  event.preventDefault();
+			});
+
+			function calculator(){
+				let revenues = 0;
+				let expense = 0;
+				let salary = parseFloat(document.getElementById('salary').value.replace(/\./g,""));
+
+				$(".revenues-other-id").toArray().forEach(function(item){ 
+					if (isNaN(item.value.replace(/\./g,""))){
+						alert("Must input numbers");
+						return false;
+					} else if(item.value.replace(/\./g,"") === ""){
+						alert("Must input field!");
+						return false;
+					}else{
+						revenues += parseFloat(item.value.replace(/\./g,""));
+						console.log("reven:"+item.value.replace(/\./g,""));
+					}
+				});
+
+				$(".expense-id").toArray().forEach(function(item){ 
+					if (isNaN(item.value.replace(/\./g,""))){
+						alert("Must input numbers");
+						return false;
+					}else if(item.value.replace(/\./g,"") === ""){
+						alert("Must input field!");
+						return false;
+					}else{
+						expense += parseFloat(item.value.replace(/\./g,""));
+						console.log("expense:"+item.value.replace(/\./g,""));
+
+					}
+				});
+
+
+				console.log(`Res: ${revenues} Exp: ${expense} salary ${salary}`);
+				// if(!isNaN(revenues) && !isNaN(expense)){
+				// 	let rest = salary +  revenues - expense;
+				// 	document.getElementById('the-rest').value = rest;
+				// }
+
+				let rest = salary +  revenues - expense;
+				document.getElementById('the-rest').value = rest;
+				splitInDots(document.getElementById('the-rest'));
+			}
+
+			function reverseNumber(input) {
+		       return [].map.call(input, function(x) {
+		          return x;
+		        }).reverse().join(''); 
+		      }
+			function splitInDots(input) {
+		        var value = input.value,
+		            plain = plainNumber(value),
+		            reversed = reverseNumber(plain),
+		            reversedWithDots = reversed.match(/.{1,3}/g).join('.'),
+		            normal = reverseNumber(reversedWithDots);
+		        
+		        console.log(plain,reversed, reversedWithDots, normal);
+		        input.value = normal;
+		      }
+		    function plainNumber(number) {
+		        return number.split('.').join('');
+		    }
+	</script>
+</body>
+</html>
