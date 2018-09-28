@@ -1,10 +1,9 @@
 ---
 layout: post
-title:  "Trusthy và Falsy "
+title:  "Trusthy và Falsy"
 date:   2018-09-28 3:00:40 +0200
 img: truthy-falsy.jpg
-description: 
-Truthy và Falsy là gì?, thật ra khái niệm rất lạ và tôi cũng tự hỏi nó là cái gì mặc dù học Javascript 4 năm rồi. Đúng là cái gì không biết thì nó thật mới mẽ.
+description: Truthy và Falsy là gì?, thật ra khái niệm rất lạ và tôi cũng tự hỏi nó là cái gì mặc dù học Javascript 4 năm rồi. Đúng là cái gì không biết thì nó thật mới mẽ.
 category: Coding
 ---
 
