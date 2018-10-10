@@ -51,7 +51,6 @@ Những giá trị còn lại là **Truthy** bao gồm cả:
 Cách nhớ nhanh thì ta chỉ cần để ý những giá trị được liệt kê là Falsy thôi còn lại là Truthy tất.
 
 ### 2. Bonus hàm kiểm tra Truthy 
-Sử dụng array như 1 queue cũng có 2 method là unshift (enqueue), shift (dequeue) để đảm bảo đặc tính FIFO (đi sớm về sớm)
 
 {% highlight javascript %}
 function isTruthy(x) {
