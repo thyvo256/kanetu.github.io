@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Tính nghịch đảo nhân</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+
+	<style>
+
+	.ps-relatetive{
+		position: relative;
+	}
+	.input-name{
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 7px 14px;
+	    background: lightgrey;
+	    border-radius: 5px 0px 0px 5px;
+	}
+	.pd{
+		padding-left: 45px;
+	}
+	#cal-btn{
+		border: none;
+	    margin: 2px;
+	    padding: 5px 20px;
+	    background: gainsboro;
+	}
+	#cal-btn:hover{
+		color: #fff;
+		background: black;
+		transition: 1s;
+	}
+	table{
+		text-align: center;
+	}
+	.mt-20{
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row mt-20">
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<div class="row">
+					<div class="col-xs-12 col-md-4">
+						<div class="ps-relatetive form-group">
+							<div class="input-name">Z</div>
+							<input type="text" class="form-control pd" name="" id="inputA">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<div class="ps-relatetive form-group">
+							<div class="input-name">A</div>
+							<input type="text" class="form-control pd" name="" id="inputB">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-4">
+						<button  id="cal-btn">Cal</button>
+					</div>
+				</div>
+				
+				
+						
+			</div>
+
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Q</th>
+							<th>R1</th>
+							<th>R2</th>
+							<th>R</th>
+							<th>T1</th>
+							<th>T2</th>
+							<th>T</th>
+						</tr>
+					</thead>
+					<tbody id="result">
+						
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" ></script>
+
+	<script type="text/javascript" charset="utf-8" async defer>
+
+		window.onload = function(){
+			var result = document.getElementById('result');
+			var inputA = document.getElementById('inputA');
+			var inputB = document.getElementById('inputB');
+			var button = document.getElementById('cal-btn');
+
+			function GCD(){
+				let x = parseInt(inputA.value);
+				let y = parseInt(inputB.value);
+				let t1 = 0;
+				let t2 = 1;
+				let table = "";
+			//console.log(`| q | r1 | r2 | r |`)
+			while(y != 0){
+				let q = Math.floor(x / y);
+				let r = x - y*q;
+				let t = t1 - t2*q;
+
+				//console.log(`${q} ${x} ${y} ${r} ${t1} ${t2} ${t}`)
+				table += `<tr><td>${q}</td> <td>${x}</td> <td>${y}</td> <td>${r}</td> <td>${t1}</td> <td>${t2}</td> <td>${t}</td> </tr>`;
+				x = y;
+				y = r;
+				t1 = t2;
+				t2 = t;
+			}
+			//console.log(`${x} ${y} ${t1} ${t2}`)
+			table += `<td></td> <td>${x}</td> <td>${y}</td> <td></td> <td>${t1}</td> <td>${t2}</td> <td></td> </tr>`;
+			result.innerHTML = table;
+		}
+
+		button.addEventListener('click',GCD)
+	}
+
+</script>
+</body>
+</html>
