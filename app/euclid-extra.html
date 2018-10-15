@@ -110,22 +110,22 @@
 				let t1 = 0;
 				let t2 = 1;
 				let table = "";
-			//console.log(`| q | r1 | r2 | r |`)
-			while(y != 0){
-				let q = Math.floor(x / y);
-				let r = x - y*q;
-				let t = t1 - t2*q;
+				if( x != "" && y != ""){
+					while(y != 0){
+						let q = Math.floor(x / y);
+						let r = x - y*q;
+						let t = t1 - t2*q;
 
-				//console.log(`${q} ${x} ${y} ${r} ${t1} ${t2} ${t}`)
-				table += `<tr><td>${q}</td> <td>${x}</td> <td>${y}</td> <td>${r}</td> <td>${t1}</td> <td>${t2}</td> <td>${t}</td> </tr>`;
-				x = y;
-				y = r;
-				t1 = t2;
-				t2 = t;
-			}
-			//console.log(`${x} ${y} ${t1} ${t2}`)
-			table += `<td></td> <td>${x}</td> <td>${y}</td> <td></td> <td>${t1}</td> <td>${t2}</td> <td></td> </tr>`;
-			result.innerHTML = table;
+						table += `<tr><td>${q}</td> <td>${x}</td> <td>${y}</td> <td>${r}</td> <td>${t1}</td> <td>${t2}</td> <td>${t}</td> </tr>`;
+						x = y;
+						y = r;
+						t1 = t2;
+						t2 = t;
+					}	
+					table += `<td></td> <td>${x}</td> <td>${y}</td> <td></td> <td>${t1}</td> <td>${t2}</td> <td></td> </tr>`;
+					result.innerHTML = table;
+				}
+			
 		}
 
 		button.addEventListener('click',GCD)
