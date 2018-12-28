@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://kanetu.github.io/app/euclid-extra.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>GDC(Q(n),e) == 1?</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<style>
+
+	.ps-relatetive{
+		position: relative;
+	}
+	.input-name{
+		position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 7px 14px;
+	    background: lightgrey;
+	    border-radius: 5px 0px 0px 5px;
+	}
+	.pd{
+		padding-left: 45px;
+	}
+	#cal-btn{
+		border: none;
+	    margin: 2px;
+	    padding: 5px 20px;
+	    background: gainsboro;
+	    width: 100%;
+
+	}
+	#cal-btn:hover{
+		color: #fff;
+		background: black;
+		transition: 1s;
+	}
+	table{
+		margin-top: 10px;
+		text-align: center;
+	}
+	.mt-20{
+		margin-top: 20px;
+	}
+</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="row mt-20">
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<div class="row">
+					<div class="col-xs-12 col-md-3">
+						<div class="ps-relatetive form-group">
+							<div class="input-name">A</div>
+							<input type="text" class="form-control pd" name="" id="inputA">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<div class="ps-relatetive form-group">
+							<div class="input-name">X</div>
+							<input type="text" class="form-control pd" name="" id="inputX">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<div class="ps-relatetive form-group">
+							<div class="input-name">N</div>
+							<input type="text" class="form-control pd" name="" id="inputN">
+						</div>
+					</div>
+					<div class="col-xs-12 col-md-3">
+						<button id="cal-btn">Cal</button>
+					</div>
+				</div>
+				<div class="col-xs-12">
+				<p>Tính công thức: a^x mod n</p>
+				<p>Sau khi tính thì lấy kết quả là D cuối cùng</p>
+			</div>
+				
+						
+			</div>
+			
+			<div class="col-xs-12 col-md-6 offset-md-3 col-lg-6 offset-lg-3">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>A</th>
+							<th>X</th>
+							<th>N</th>
+							<th>D</th>
+						</tr>
+					</thead>
+					<tbody id="result">
+						
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" charset="utf-8" async="" defer="">
+
+		window.onload = function(){
+			var result = document.getElementById('result');
+			var inputA = document.getElementById('inputA');
+			var inputX = document.getElementById('inputX');
+			var inputN = document.getElementById('inputN');
+			var button = document.getElementById('cal-btn');
+
+			function GCD(){
+				let a = parseInt(inputA.value);
+				let x = parseInt(inputX.value);
+				let n = parseInt(inputN.value);
+				let d = 1;
+				
+				let table = "";
+					while(x != 0){
+						if(x % 2 != 0)
+							d = (d * a) % n;
+						x = Math.floor(x / 2);
+						a =  (a * a) % n;
+
+						
+
+						table += `<tr>
+							<td>${a}</td> <td>${x}</td> <td>${n}</td> <td>${d}</td> 
+						</tr>`;
+						
+					}	
+					result.innerHTML = table;
+			
+		}
+
+		button.addEventListener('click',GCD)
+	}
+
+</script>
+
+</body></html>
